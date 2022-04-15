@@ -5,16 +5,40 @@
   width: 100%;
   justify-content: center;
 }
+//For different type responsive screen
+$small: 300px;
+$medium: 700px;
+
+.filter-sorting-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+
+  //Media query for responsive screen
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
+  }
+
+  .filter-container {
+    width: 250px;
+  }
+
+  .dropdown-container {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
 
 .mat-column-Sugar {
   text-align: right;
   justify-content: flex-end;
 }
 
-.mat-row:nth-child(even){
+.mat-row:nth-child(even) {
   background-color: #FFFFFF;
 }
 
-.mat-row:nth-child(odd){
+.mat-row:nth-child(odd) {
   background-color: #FAFAFA;
 }

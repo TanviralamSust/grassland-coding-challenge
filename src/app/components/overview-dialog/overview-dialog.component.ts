@@ -4,19 +4,23 @@ import {Fruit} from "../../models/fruit";
 
 
 @Component({
-  selector: 'app-overview-dialog',
-  templateUrl: './overview-dialog.component.html',
-  styleUrls: ['./overview-dialog.component.css']
+    selector: 'app-overview-dialog',
+    templateUrl: './overview-dialog.component.html',
+    styleUrls: ['./overview-dialog.component.scss']
 })
 export class OverviewDialogComponent implements OnInit {
 
-  constructor(
-      public dialogRef: MatDialogRef<OverviewDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: Fruit) {}
-onNoClick(): void {
-    this.dialogRef.close();
-  }
+    constructor(
+        public dialogRef: MatDialogRef<OverviewDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: Fruit) {
+        dialogRef.disableClose = true;
+    }
 
-  ngOnInit(): void {
-  }
+    //For closing dialog on button click
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
+
+    ngOnInit(): void {
+    }
 
 }

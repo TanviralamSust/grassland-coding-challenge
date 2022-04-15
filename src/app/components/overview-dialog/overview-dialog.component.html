@@ -1,12 +1,19 @@
-<h2>{{data.name}} Fruit Overview</h2>
-<p mat-dialog-title>Genus : {{data.genus}}</p>
-<p mat-dialog-title>Family : {{data.family}}</p>
-<p mat-dialog-title>Order : {{data.order}}</p>
-<p mat-dialog-title>Calories : {{data.nutritions.calories}}</p>
-<p mat-dialog-title>Carbohydrates : {{data.nutritions.carbohydrates}}</p>
-<p mat-dialog-title>Fat : {{data.nutritions.fat}}</p>
-<p mat-dialog-title>Protein : {{data.nutritions.protein}}</p>
-<p mat-dialog-title>Sugar : {{data.nutritions.sugar}}</p>
-<div mat-dialog-actions>
-    <button mat-button class="mat-focus-indicator mat-raised-button mat-button-base mat-raised" (click)="onNoClick()">Close!!</button>
-</div>
+<mat-card class="fruit-details-card">
+    <mat-card-title>{{data.name}}</mat-card-title>
+    <mat-card-content class="secondary-details-container">
+        <p class="text-style"><b>Genus</b> : {{data.genus}}</p>
+        <p class="text-style"><b>Family</b> : {{data.family}}</p>
+        <p class="text-style"><b>Order</b> : {{data.order}}</p>
+        <p class="text-style"><b>Calories</b> : {{data.nutritions.calories}}</p>
+        <p class="text-style"><b>Carbohydrates</b> : {{data.nutritions.carbohydrates}}</p>
+        <p class="text-style"><b>Fat</b> : {{data.nutritions.fat}}</p>
+        <p class="text-style"><b>Protein</b> : {{data.nutritions.protein}}</p>
+        <p class="text-style"><b>Sugar</b> : {{data.nutritions.sugar}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button class="mat-focus-indicator mat-raised-button mat-button-base mat-raised"
+                (click)="onNoClick()">
+            Close!!
+        </button>
+    </mat-card-actions>
+</mat-card>
