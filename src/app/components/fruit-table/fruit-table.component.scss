@@ -6,4 +6,15 @@
   justify-content: center;
 }
 
+.mat-column-Sugar {
+  text-align: right;
+  justify-content: flex-end;
+}
 
+.mat-row:nth-child(even){
+  background-color: #FFFFFF;
+}
+
+.mat-row:nth-child(odd){
+  background-color: #FAFAFA;
+}
