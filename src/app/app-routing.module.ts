@@ -13,6 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+
+import {MatDialogModule} from '@angular/material/dialog';
+import {OverviewDialogComponent} from "./components/overview-dialog/overview-dialog.component";
+
 
 const routes: Routes = [
   {
@@ -41,11 +49,18 @@ const routes: Routes = [
     RouterModule,
     MatMenuModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatButtonModule,
   ],
   exports: [RouterModule],
   declarations: [
     FruitTableComponent,
+     OverviewDialogComponent
   ]
 })
 export class AppRoutingModule {

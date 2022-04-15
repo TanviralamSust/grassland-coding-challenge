@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './components/app/app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FruitTableComponent } from './components/fruit-table/fruit-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
@@ -14,8 +14,14 @@ import {RouterModule} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {AppRoutingModule} from './app-routing.module';
 import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from '@angular/common';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+import {OverviewDialogComponent} from "./components/overview-dialog/overview-dialog.component";
 
 @NgModule({
+  entryComponents:[OverviewDialogComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -29,8 +35,14 @@ import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from '@angular/co
     MatToolbarModule,
     MatButtonModule,
     RouterModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatSelectModule
   ],
+
+
   declarations: [
     AppComponent,
   ],
